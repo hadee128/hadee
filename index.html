@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DigitalGrow - Referral Platform</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">DigitalGrow</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#packages">Services</a>
+    <a href="#dashboard">Dashboard</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div>
+    <span class="badge">DIGITAL MARKETING PLATFORM</span>
+    <h1>Grow your network. Earn from real marketing services.</h1>
+    <p>Join, refer clients, and earn commission when a referred customer purchases an eligible digital-marketing service.</p>
+    <a class="btn" href="#signup">Create Account</a>
+  </div>
+</section>
+
+<section id="packages" class="section">
+<h2>Digital Marketing Services</h2>
+<div class="cards">
+  <div class="card"><h3>Starter</h3><p>Social media setup & basic marketing guidance.</p><b>Rs. 1,000</b></div>
+  <div class="card"><h3>Growth</h3><p>Social media management & campaign support.</p><b>Rs. 3,000</b></div>
+  <div class="card"><h3>Business</h3><p>Advanced digital marketing support for businesses.</p><b>Rs. 7,000</b></div>
+</div>
+</section>
+
+<section id="signup" class="section form-section">
+<h2>Create Demo Account</h2>
+<form id="signupForm">
+  <input id="name" placeholder="Full name" required>
+  <input id="email" type="email" placeholder="Email" required>
+  <input id="ref" placeholder="Referral code (optional)">
+  <button class="btn" type="submit">Create Account</button>
+</form>
+<p id="signupMsg"></p>
+</section>
+
+<section id="dashboard" class="section dashboard">
+<h2>Member Dashboard</h2>
+<div class="stats">
+  <div><small>Referral Code</small><strong id="refCode">-</strong></div>
+  <div><small>Referred Members</small><strong id="members">0</strong></div>
+  <div><small>Commission</small><strong>Rs. <span id="earnings">0</span></strong></div>
+</div>
+<div class="panel">
+<h3>Your Referral Link</h3>
+<div class="copyrow"><input id="refLink" readonly><button onclick="copyLink()">Copy</button></div>
+<p class="note">Demo only: commission is recorded for eligible service purchases, not merely for joining.</p>
+</div>
+<div class="panel">
+<h3>Withdrawal Request</h3>
+<input id="withdrawAmount" type="number" min="1" placeholder="Amount">
+<button class="btn" onclick="withdraw()">Request Withdrawal</button>
+<p id="withdrawMsg"></p>
+</div>
+</section>
+</main>
+
+<footer>© 2026 DigitalGrow — Demo Platform</footer>
+<script src="app.js"></script>
+</body>
+</html>
